@@ -1,0 +1,892 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 기본설정 */
+html, body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Pretendard-Regular';
+}
+
+#App {
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url("../../public/assets/background.jpg");
+  background-size: cover;
+}
+
+/* 각 컴포넌트 별 최상위 div */
+#container {
+  width: 100vw;
+  height: 100%;
+}
+
+/* navbar 하단, 내용이 들어가는 파트 */
+#contents {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* 상단 네비게이션 바 */
+#navbar {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar-left {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar-center {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar-right-only {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+#navbar-right {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#navbar-right-notice {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar-right-profile {
+  width: 60%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+/* 메뉴 사이드바 */
+#slide-out {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 2rem;
+  background-color: #f5f5f5;
+}
+
+.user-view {
+  padding-left: 2rem !important;
+  padding-top: 2rem !important;
+  padding-right: 2rem !important;
+  padding-bottom: 1rem !important;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#user-left {}
+
+#user-right {
+  display: flex;
+  align-items: center;
+}
+
+#sidebar-case-info {
+  padding-left: 32px;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid lightgray;
+}
+
+#sidebar-connected-case-label {
+  font-size: 1rem;
+}
+
+#sidebar-connected-case-value {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#sidebar-go-to-caselist {
+  font-size: 1rem;
+  font-weight: bold;
+  color: orange;
+}
+
+#sidebar-navigator-list {
+  font-size: 1.25rem;
+} 
+
+
+#sidebar-bottom {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#logout {
+  margin-bottom: 3rem;
+}
+
+#logout li a {
+  font-size: 1.25rem;
+  color: orange;
+}
+
+#sidebar-logo {
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+}
+
+
+/* 각 페이지 타이틀 */
+#page-title {
+  margin-bottom: 15%;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 작은 타이틀 */
+#page-title-small1 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#page-title-small2 {
+  margin-top: 20%;
+  margin-bottom: 10%;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* 흰색 컨텐츠 박스 (className "white z-depth-4" 추가필요)*/
+#contents-box {
+  width: 100%;
+  padding: 20px 10px 10px 10px;
+  border-radius: 15px;  
+}
+
+/* 폼 박스 (내용들 감싸는 상위 div)  */
+#form-box {}
+
+/* col12 짜리 버튼 > 주로 리스트 */
+#list-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin-top: 1.5rem;
+  border-radius: 15px;
+}
+
+#list-box-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+#list-box-primary {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #244152;
+}
+
+#list-box-secondary {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  color: #244152;
+  font-size: 0.9rem;
+}
+
+/* 리스트 박스 > 좌측에 내용, 우측에 아이콘 들어가는 경우 */
+#list-box-left {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+#list-box-left-up {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #244152;
+}
+#list-box-left-down {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  color: #244152;
+  font-size: 0.9rem;
+}
+
+#list-box-right {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* 하단 버튼 컨테이너 */
+#buttons {
+  margin-top: 50%;
+  padding-bottom: 4rem;
+}
+
+/* 단독버튼 */
+#button {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  color: #244152 !important;
+  font-weight: bold;
+}
+
+/* 상하버튼 */
+#button-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  color: #244152 !important;
+  font-weight: bold;
+}
+
+#button-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  height: 4rem;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  color: #244152 !important;
+  font-weight: bold;
+}
+
+/* 좌우버튼 */
+#button-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  color: #244152 !important;
+  font-weight: bold;
+} 
+
+#button-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  color: #244152 !important;
+  font-weight: bold;
+} 
+
+
+/* 검색창 관련 */
+#search-box {
+  width: 100%;
+  padding: 1rem 0 0 0;
+  border-radius: 15px;
+}
+
+#search-icon-box {
+  width: 100%;
+  padding: 8px 0 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-info {
+
+}
+
+#search-result-title {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#search-result-list {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+}
+
+#search-result-list-medname {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #244152 !important;
+}
+
+#search-result-list-company {
+  font-size: 0.8rem;
+  color: #000000 !important;
+}
+
+#no-search-result {
+  width: 100%;
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-result-message h5 {
+  /* font-weight: bold; */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#search-result-message h4 {
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+/* 모달관련 css */
+#modal-cancel-button {}
+#modal-delete-button {}
+#modal-complete-button {}
+
+
+
+
+/* 약통 목록 디자인 */
+#med-list-left {
+  width: 100%;
+  height: 8rem;
+  padding: 0 1rem;
+  border-radius: 15px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#med-list-right {
+  width: 100%;
+  height: 8rem;
+  padding: 0 1rem;
+  border-radius: 15px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 증상 목록 디자인 */
+#symptom-list-left {
+  width: 100%;
+  height: 4rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #244152 !important;
+}
+
+#symptom-list-right {
+  width: 100%;
+  height: 4rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #244152 !important;
+}
+
+
+/* 정보 전달 폼 */
+#info-list {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+#info-title {
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  color: #244152;
+}
+
+#info-content {
+  font-size: 1.2rem;
+}
+
+
+/* 메인페이지 */
+
+#main-page-contents {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#caselist-select-section {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#caselist-select {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#selected-case {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: 1.75rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#triangle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-button1 {
+  width: 100%;
+  height: 9rem;
+  padding: 1rem 1rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#main-button1-icon {
+  width: 100%;
+  display: flex;
+}
+
+#main-button1-title {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #244152;
+  /* text-shadow: 2px 2px 4px rgba(127, 127, 127, 0.5); */
+}
+
+#main-button2 {
+  width: 100%;
+  height: 7rem;
+  padding: 1rem 1rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-button2-icon {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+#main-button2-title {
+  width: 70%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #244152;
+  /* text-shadow: 2px 2px 4px rgba(127, 127, 127, 0.5); */
+}
+
+#main-page-small-title-section {
+  width: 95%;
+  height: 4rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+#main-page-small-title {
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#main-page-small-title-icon {
+  margin-top: 2.5%;
+  margin-left: 1rem;
+}
+
+
+
+#main-bookmark-item {
+  width: 100%;
+  height: 4rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #244152 !important;
+}
+
+#main-bookmark-alert {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* 알림함 */
+#notice-list {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+}
+
+#notice-list-title-part {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+}
+
+#notice-list-title {
+  font-size: 1.125rem;
+}
+
+#notice-list-title-icon {
+  margin-left: 0.5rem;
+}
+
+#notice-list-content {
+  font-size: 0.9rem;
+}
+
+#no-search-result {
+  width: 100%;
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#notice-detail-title {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+#notice-detail-date {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid lightgray;
+}
+
+#notice-detail-content {
+  width: 100%;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+/* 근처 약국 찾기 */
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+}
+
+/* 카메라 */
+#barcode-camera {
+  margin-top: 3rem;
+}
+
+
+
+
+/* 메세지 페이지 폼 */
+#message {
+  width: 100%;
+  margin-top: 60%;
+}
+
+#message h5 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* 페이지 최하단부 여유공간 */
+#bottom-area {
+  width: 100%;
+  height: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#form-container {
+    width: 100%;
+    /* margin-top: 30px; */
+    padding: 20px 10px 10px 10px;
+    border-radius: 15px;  
+}
+
+#form-button {
+  width: 100%;
+} 
+
+#form-button button {
+  width: 100%;
+  height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 로그인페이지 */
+#login-box {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 10px 10px 10px;
+  border-radius: 15px;
+}
+
+h1 {
+  margin-bottom: 4rem !important;
+}
+
+#username-field {
+  margin-top: 40px;
+}
+
+#login-button {
+  width: 100%;
+  margin-top: 20px;
+} 
+
+#login-button button {
+  width: 100%;
+  height: 50px;
+}
+
+#social-login {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+#social-logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+#social-logos img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+#social-login-text {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#password-find-field {
+  width: 100%;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+
+
+
+/* 회원가입페이지 */
+
+#signup-contents {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#signup-contents h4 {
+  margin-top: 40px;
+}
+
+#signup-box {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0 10px 10px 10px;
+  border-radius: 15px;
+}
+
+#signup-button {
+  width: 100%;
+} 
+
+#signup-button button {
+  width: 100%;
+  height: 50px;
+}
+
+#social-signup {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+
+#isduplicated-button {
+  margin-top: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#isduplicated-button button {
+  font-size: 0.75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 날짜선택 창 색깔 변경가능 */
+/* .datepicker-date-display {
+  background-color: crimson; */
+/* } */
